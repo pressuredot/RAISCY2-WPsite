@@ -1,77 +1,20 @@
-# WordPress Core files to ignore
+# WordPress core files that shouldn't be in version control
 wp-config.php
-wp-config-local.php
+.htaccess
+
+# User uploaded content (optional - you may want to exclude this for large sites)
 wp-content/uploads/
-wp-content/upgrade/
-wp-content/backup-db/
+
+# Docker related
+.docker/
+docker-volume/
+
+# Cache and temporary files
 wp-content/cache/
-wp-content/backups/
-
-# WordPress debugging
-debug.log
-*.log
-
-# WordPress generated files
-sitemap.xml
-sitemap.xml.gz
-
-# WordPress specific plugins/themes
-wp-content/advanced-cache.php
-wp-content/wp-cache-config.php
+wp-content/upgrade/
 wp-content/backup-db/
 wp-content/backups/
-wp-content/blogs.dir/
-wp-content/upgrade/
-wp-content/mu-plugins/
+wp-content/debug.log
 
-# System files
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# IDE specific files
-.idea/
-.vscode/
-*.sublime-workspace
-*.sublime-project
-nbproject/
-
-# Node modules if using any build tools
+# Node modules if any
 node_modules/
-npm-debug.log
-yarn-error.log
-
-# Environment files
-.env
-.env.*
-!.env.example
-
-# Database exports
-*.sql
-*.sql.gz
-
-# Keep these files (add ! before the path)
-!.gitignore
-!wp-content/plugins/.gitkeep
-!wp-content/themes/.gitkeep
-!wp-content/uploads/.gitkeep
